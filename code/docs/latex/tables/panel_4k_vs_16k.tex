@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\footnotesize
+\caption{Decoding-budget sensitivity: fingerprint at \texttt{max\_tokens=4096} vs.\ \texttt{max\_tokens=16384} on the same 354 families, $K{=}8$, same prompt, same verifier. Models trained with long reasoning chains (Base-2k, Mile-2k, gpt-oss-20b, DeepSeek-V3.1) shift meaningfully at 16K; pre-RL Qwen3-8B-Base and Llama-3.3-70B-Instruct (neither RL-tuned on long chains in our setup) are stable within bootstrap noise.}
+\label{tab:panel_4k_vs_16k}
+\vspace{4pt}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+& \multicolumn{4}{c}{\textbf{4K}} & \multicolumn{4}{c}{\textbf{16K}} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+\textbf{Model} & \textbf{dir.} & \textbf{desc} & \textbf{gold} & \textbf{ceil.} & \textbf{dir.} & \textbf{desc} & \textbf{gold} & \textbf{ceil.} \\
+\midrule
+\bottomrule
+\end{tabular}
+\end{table}

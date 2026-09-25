@@ -1,0 +1,14 @@
+\begin{table}[h]
+\centering
+\scriptsize
+\caption{Format / extraction-failure audit on a 50-family random subset (seed 42), $K{=}8$ rollouts per family per condition, raw responses logged. Each rollout is classified into a bucket by the extractor: \textsc{no\_boxed} (no \texttt{\textbackslash boxed\{\}} in response), \textsc{no\_boxed\_trunc} (no boxed and hit \texttt{max\_tokens}), \textsc{unparsable} (boxed but content unparseable), \textsc{parsed\_wrong} (parsed, verifier says wrong), \textsc{parsed\_correct} (parsed, verifier accepts). Percentages are of the 400 rollouts in each (model, condition) cell.}
+\label{tab:format_audit}
+\vspace{4pt}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrrr}
+\toprule
+\textbf{Model} & \textbf{Condition} & \textbf{$n$} & \textbf{no\_boxed} & \textbf{no\_boxed\_trunc} & \textbf{unparsable} & \textbf{parsed\_wrong} & \textbf{parsed\_correct} \\
+\midrule
+\bottomrule
+\end{tabular}
+\end{table}
