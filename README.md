@@ -230,6 +230,23 @@ These six scripts run end-to-end on this release and rebuild the corresponding p
 
 **Scripts that are reproducibility specifications, not drop-in commands** — they depend on intermediate artifacts not packaged here (`manifest.jsonl`, `panel_fingerprints_16k.json`, `oracle_canonical.jsonl`, the 4K `oracle_panel/`, the per-checkpoint `oracle_trajectory/`, the `format_audit/` raw rollouts, the 150-problem held-out source pool): `build_oracle_specificity.py`, `build_panel_figures_16k.py`, `build_specificity_decoupling.py`, `compute_bootstrap_cis.py`, `build_held_out_families.py`, `analyze_milestone_types.py`, `build_4k_vs_16k_comparison.py`, `build_trajectory_tomography.py`, `analyze_format_audit.py`. The corresponding figures and tables in the paper are precomputed (the populated `.tex` outputs are shipped under `code/docs/latex/tables/`); these scripts document how those numbers were built so reviewers can audit the procedure even though they cannot regenerate the outputs from this release alone.
 
+## Verifier modes
+
+`VerifierModule()` is the strict cascade used for every number in the paper. `VerifierModule(extended=True)` (added in v1.1) keeps that cascade and adds checks for relational and compound answers. We recommend it for new evaluations.
+
+```python
+from decomposer.verifier.verifier import VerifierModule
+from decomposer.verifier.extended import is_leak
+v = VerifierModule(extended=True)
+v.verify(response=r"... \boxed{c=2a}", answer="2a-c=0")                   # ACCEPT: equivalent equations
+v.verify(response=r"... \boxed{174} and \boxed{13}", answer="174,13")       # ACCEPT: answer split over two boxes
+is_leak(r"a\le -2", r"a \leq -2")                                          # True: milestone gold gives away the parent answer
+```
+
+The extended mode adds: equations equal up to rearrangement or a constant factor; inequalities, intervals, and unions compared as solution sets over the reals; a labeled value (`S = 3/2`) against a bare value; compound answers matched by variable name, by position, or as an unordered list, including answers written in several `\boxed{}`; and thousands separators removed only when the whole answer is one number, so `(1,234)` is no longer read as `1234`. `is_leak` uses the same equivalence to check whether a milestone's gold answer gives away the parent answer.
+
+Regression on the 3,200 released raw responses (`code/scripts/verifier_extended_regression.py`): all 517 responses the default cascade accepts are still accepted, and the extended mode accepts 48 more, all of them correct answers written across several boxes. Tests: `cd code && python -m pytest tests/test_verifier_extended.py`. One behavior of math-verify remains in both modes: a list of assignments and a tuple are compared as sets, so the order of tuple entries is not checked.
+
 ## License
 
 - **Data** (everything under `data/`, `prompts/`, and the data files under `extended_experiments/`): CC BY 4.0.
