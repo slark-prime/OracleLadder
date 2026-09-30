@@ -5,7 +5,7 @@ Code and data for **Solving Every Step Is Not Enough: Milestone Oracles Reveal a
 Zhuohan Wang\*†, Haoran Ma\*, Tianyu Wu\*, Yuanlin Duan, Zichun Liao, Jieming Yu†
 (\*equal contribution, †corresponding authors)
 
-**Paper:** arXiv link coming soon · **Dataset card:** [DATASET_CARD.md](DATASET_CARD.md)
+**Paper:** [arXiv:2609.32235](https://arxiv.org/abs/2609.32235) · [OpenReview](https://openreview.net/forum?id=BwSWaq4eEw) · **Dataset card:** [DATASET_CARD.md](DATASET_CARD.md)
 
 Large language models (LLMs) can solve every intermediate step of a multi-step math problem on its own and still fail the full problem, even when given a roadmap of the steps and all of their answers. OracleLadder locates where LLM math reasoning fails by giving the model increasing levels of oracle help. For each problem, a teacher model writes a fixed roadmap of intermediate sub-goals (milestones), each with a checkable answer. The evaluated model is tested with no help (`C1`), with the roadmap (`C2`), and with the roadmap plus the milestone answers (`C3`), and separately on each milestone alone (Stage 0). A deterministic symbolic verifier grades every answer, with no LLM judge. Combining the tests sorts every problem the model cannot solve directly into one of five reasoning gaps: `roadmap`, `milestone-execution`, `composition`, `missing-milestone`, and `capability`.
 
@@ -23,7 +23,10 @@ Large language models (LLMs) can solve every intermediate step of a multi-step m
   title     = {Solving Every Step Is Not Enough: Milestone Oracles Reveal a Composition Gap in {LLM} Math Reasoning},
   author    = {Wang, Zhuohan and Ma, Haoran and Wu, Tianyu and Duan, Yuanlin and Liao, Zichun and Yu, Jieming},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track},
-  year      = {2026}
+  year      = {2026},
+  eprint    = {2609.32235},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL}
 }
 ```
 

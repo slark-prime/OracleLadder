@@ -1,6 +1,6 @@
 # Dataset card: OracleLadder
 
-OracleLadder is a diagnostic set for locating where LLM math reasoning fails. Each of the 354 **milestone families** pairs a NuminaMath parent problem with a teacher-written roadmap of intermediate sub-goals (milestones), each with a gold answer that a symbolic verifier can check. A model is tested with no help (C1), with the roadmap (C2), and with the roadmap plus the milestone answers (C3), and separately on each milestone alone (Stage 0). The paper is *Solving Every Step Is Not Enough: Milestone Oracles Reveal a Composition Gap in LLM Math Reasoning* (NeurIPS 2026, Evaluations and Datasets Track).
+OracleLadder is a diagnostic set for locating where LLM math reasoning fails. Each of the 354 **milestone families** pairs a NuminaMath parent problem with a teacher-written roadmap of intermediate sub-goals (milestones), each with a gold answer that a symbolic verifier can check. A model is tested with no help (C1), with the roadmap (C2), and with the roadmap plus the milestone answers (C3), and separately on each milestone alone (Stage 0). The paper is [*Solving Every Step Is Not Enough: Milestone Oracles Reveal a Composition Gap in LLM Math Reasoning*](https://arxiv.org/abs/2609.32235) (NeurIPS 2026, Evaluations and Datasets Track).
 
 ## Scope and conditioning (read this first)
 

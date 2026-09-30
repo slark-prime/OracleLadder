@@ -91,7 +91,7 @@
       "name": "Jieming Yu"
     }
   ],
-  "citeAs": "Wang, Z., Ma, H., Wu, T., Duan, Y., Liao, Z., and Yu, J. Solving Every Step Is Not Enough: Milestone Oracles Reveal a Composition Gap in LLM Math Reasoning. NeurIPS 2026, Evaluations and Datasets Track.",
+  "citeAs": "Wang, Z., Ma, H., Wu, T., Duan, Y., Liao, Z., and Yu, J. Solving Every Step Is Not Enough: Milestone Oracles Reveal a Composition Gap in LLM Math Reasoning. NeurIPS 2026, Evaluations and Datasets Track. arXiv:2609.32235.",
   "rai:dataCollection": "Source problems are sampled from NuminaMath-1.5-RL-Verifiable (a public competition-math dataset). For each parent problem, a strong teacher model (GPT-5.4 with thinking mode enabled) is prompted to produce a typed milestone decomposition, with each milestone given a self-contained description, an answer schema (one of NUMBER, EXPR, EQUATION, INEQUALITY, SET, INTERVAL, TUPLE_LIST, MATRIX_VECTOR, MCQ_STRING), and a canonical answer. Schema enforcement, anti-leakage filtering, standalone-solvability, and family-level validity are applied during compilation (see paper Algorithm 1).",
   "rai:dataCollectionType": "Curated (LLM-compiled with deterministic post-validation)",
   "rai:dataCollectionMissingData": "Of 2000 candidate parents, 1024 received valid milestone decompositions; 731 also passed the Qwen-base anchor screen; 354 had at least two non-INTEGRATE milestones and form the main diagnostic. The 32-family held-out slice is a separate compilation from a disjoint 150-parent NuminaMath sample. The 731-family compiled set is included for transparency.",
