@@ -227,7 +227,7 @@ This creates a `data/logs/rl/` directory of symlinks pointing at the released fi
 | `build_audit_triage_figure.py` | Figure 6 (audit triage) |
 | `audit_bounds.py` | Section 4.5 lower/upper-bound bookkeeping |
 | `build_accuracy_vs_recoverability_scatter.py` | Figure 3(b) inputs |
-| `bootstrap_fingerprint_cis.py` | Appendix F (fingerprint CIs) |
+| `bootstrap_fingerprint_cis.py` | Appendix F.2 (bootstrap CIs) |
 
 These six scripts run end-to-end on this release and rebuild the corresponding paper figures from the released JSONL panels. The exact panel numbers behind every figure are also recoverable directly from the JSONL files using the parent-probe snippet at the top of this section.
 

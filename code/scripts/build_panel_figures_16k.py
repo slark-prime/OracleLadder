@@ -1,4 +1,4 @@
-"""Cross-model fingerprint stacked bars (Appendix C — supporting Figure 4).
+"""Cross-model fingerprint stacked bars (numbers in the paper's Appendix E, Stage 0 table).
 
 Same recovery-state palette as Figure 5 (two-arm). Short model names.
 """

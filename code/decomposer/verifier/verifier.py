@@ -1,6 +1,6 @@
 """Strict symbolic verifier cascade — no LLM judge.
 
-Pipeline (matches paper Section 3 / Appendix N):
+Pipeline (matches paper Section 2 / Appendix B, Verifier Cascade):
     1. Strip </think> tags
     2. Extract \\boxed{...} from response (NOT_ACCEPT if missing)
     3. Try math_reward.is_equiv (handles common normalizations)

@@ -39,7 +39,7 @@ Rollout-level solve rate (280 rollouts per condition):
 **The central claim replicates: recovery comes from problem-matched milestone information.**
 C2-correct is 4.8x C2-random, and neither corruption control exceeds direct prompting.
 
-Family-level recovery needs the paper's own threshold analysis (App. D) to be read correctly, because
+Family-level recovery needs the paper's own threshold analysis (Appendix F.3) to be read correctly, because
 these families were screened at k=4 and probed at k=8 — a family whose true solve rate is ~10% will
 often pass a permissive >=1/8 rule on a fresh sample:
 
