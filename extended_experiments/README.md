@@ -13,6 +13,7 @@ unless stated in the response text.
 | `e5_crossdomain_code/` | Protocol re-instantiated on code generation (LiveCodeBench), graded by test execution: C1/C2/C3 arms at K=8 plus helper-level parts test and the compile-verified packets | global (AC-Q1) |
 | `e6_trace_and_roadmap/` | Milestone attainment in the students' own unaided traces; atomic-gold few-shot that made an independent roadmap gradable; five-way taxonomy agreement against that roadmap | global (AC-Q2), FWVb W1/Q2 |
 | `e7_second_corpus/` | Full protocol on MATH500 and AIME 2024/2025 (screen -> decompose -> Stage 0 -> six probe conditions, K=8), plus the controlled granularity ablation | global (AC-Q1), i227 Q3/W6, Qf6B W1/Q1 |
+| `e9_explainer_example/` | The worked example used in the talk, poster, and video: family `ff548f26`, Qwen3-8B (thinking disabled), M1/M2 and C1/C2/C3 at K=8 with every response saved, graded by the verifier and by hand | presentation materials |
 | `audit_full_panel/` | Rubric-based residual labels for all six panel models (906 family-labels) with rubric summary; see i227 Q4 response for the disclosed limitation of its decomposition-vs-composition axis | i227 Q1/Q4 |
 | `scripts/` | The exact scripts that produced the above | all |
 

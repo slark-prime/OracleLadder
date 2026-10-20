@@ -1,0 +1,34 @@
+{
+ "model": "Qwen/Qwen3-8B",
+ "K": 8,
+ "max_tokens": 16384,
+ "temperature": 1.0,
+ "seconds": 28,
+ "summary": {
+  "M1": {
+   "default": 8,
+   "extended": 8,
+   "k": 8
+  },
+  "M2": {
+   "default": 8,
+   "extended": 8,
+   "k": 8
+  },
+  "C1": {
+   "default": 0,
+   "extended": 0,
+   "k": 8
+  },
+  "C2": {
+   "default": 0,
+   "extended": 0,
+   "k": 8
+  },
+  "C3": {
+   "default": 0,
+   "extended": 0,
+   "k": 8
+  }
+ }
+}
